@@ -1,0 +1,21 @@
+ManifestFileVersion: 0
+CRC: 3383521377
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 29815b2d1f8099f2bb21ea1ab51ed0e6
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: e3d1bbda6b47c8af72022fe7ef4d8576
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/TestAssets/MyMaterial.mat
+Dependencies:
+- AssetBundles/Windows/texture.unity3d

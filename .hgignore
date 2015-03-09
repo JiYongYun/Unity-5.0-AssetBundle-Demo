@@ -1,0 +1,33 @@
+########################################################################################################################################################
+#
+# This ignore file is carefully formatted.  A badly formatted hgignore file has a negative impact on the performance of the status command, especially
+# on slow filesystems (i.e, NTFS and HFS+).
+#
+# DO NOT ADD ITEMS TO THE IGNORE FILE VIA GUI TOOLS LIKE TortoiseHG, SourceTree, or Visual Studio!
+#
+# If you need to add items to the ignore file, add them carefully by hand an keep the following items in mind:
+#
+#   - Before adding an entry to the .hgignore file, see if you can slightly modify one of the existing regular expressions to include your pattern
+#   - Only if you can't modify something to include your pattern (without making it twice as long), add a new entry
+#   - Don't write something that is a regex in the glob section, or vice-versa
+#   - Keep in mind that neither glob patterns or regular expressions in the ignore file are rooted
+#
+# Ask for changes to the .hgignore file to be code reviewd by the build engineering team!
+#
+########################################################################################################################################################
+
+# This section is full of shell-style glob patterns
+syntax:glob
+
+Temp/*
+Library/*
+AssetBundles/*
+output/*
+.DS_Store
+*.csproj*
+*.pdb
+*.sln
+*.suo
+*.userprefs
+
+

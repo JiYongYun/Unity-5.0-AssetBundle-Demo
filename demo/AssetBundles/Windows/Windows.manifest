@@ -1,0 +1,28 @@
+ManifestFileVersion: 0
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: scene.unity3d
+      Dependencies:
+        Dependency_0: material.unity3d
+    Info_1:
+      Name: variants/myassets.hd
+      Dependencies: {}
+    Info_2:
+      Name: variants/variant-scene.unity3d
+      Dependencies:
+        Dependency_0: variants/myassets.hd
+    Info_3:
+      Name: variants/myassets.sd
+      Dependencies: {}
+    Info_4:
+      Name: texture.unity3d
+      Dependencies: {}
+    Info_5:
+      Name: cube.unity3d
+      Dependencies:
+        Dependency_0: material.unity3d
+    Info_6:
+      Name: material.unity3d
+      Dependencies:
+        Dependency_0: texture.unity3d

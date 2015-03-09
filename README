@@ -1,0 +1,48 @@
+Demo for AssetBundle 5.0 to demonstrate what we can do in the new AssetBundle system.
+Please base on Unity 5.0 beta 21 or above to run this demo.
+
+Descriptions:
+1. There're 3 scenes under TestScenes folder:
+	1. AssetLoader.unity demonstrates how to load a normal asset from AssetBundle, please refer to LoadAssets.cs script.
+	2. SceneLoader.unity demonstrates how to load a scene from AssetBundle, please refer to LoadScenes.cs script.
+	3. VariantLoader.unity demonstrates how to load variant AssetBundle, please refer to LoadVariants.cs script.
+		We use AssetBundle variants to achieve the same result as virtual assets. In the demo, we build
+			1. "My Assets HD" folder into "variant/myassets.hd" AssetBundle.
+			2. "My Assets SD" folder into "variant/myassets.sd" AssetBundle.
+			3. "variant-scene.unity" into "variants/variant-scene.unity3d" AssetBundle which actually depends on variant AssetBundle.
+		Please make sure the assets exactly match in these folders. 
+		The objects in these two variant AssetBundles will have the exactly same internal IDs which is ensured by Unity build pipeline, so they can be switched out arbitrarily with AssetBundles of different variant extensions.
+		Here the file extension "hd" and "sd" are what we call variants. You can change the active variant which is on LoadVariants.cs.
+		Please also refer to AssetBundleManager.RemapVariantName() to see how to resolve the correct AssetBundle according to the active variant.
+		Reminder: AssetBundle variant is not compatible with the Editor simulation.
+
+2. Download dependent AssetBundles automatically
+	In the new build system, the dependencies between AssetBundles are tracked in the single manifest AssetBundle. So you can get all the dependencies at runtime, and download all the dependencies automatically with a base url. 
+	Please check AssetBundleManager.LoadDependencies() in the demo for more details.
+	
+3. There're 3 menu items under the AssetBundles menu:
+	1. "Simulate AssetBundles" which is used to control AssetBundle simulation in the Editor.
+		In Editor play mode, you can simulate the AssetBundles without actually building them.
+	2. "Build AssetBundles" which simply calls BuildPipeline.BuildAssetBundles() to build the AssetBundles which are set from the AssetBundle UI, check BuildScript.BuildAssetBundles() for details.
+	3. "Build Player" which copies the AssetBundles to StreamingAssets folder then build the player data according to the build settings, check BuildScript.BuildPlayer() for details.
+
+4. AssetBundleManager class which takes of loading AssetBundle and its dependencies, it contains:
+	1. Initialize()
+		Initialize the AssetBundle manifest object.
+	2. LoadAssetAsync()
+		Load a given asset from a given AssetBundle and handle all the dependencies.
+	3. LoadLevelAsync()
+		Load a given scene from a given AssetBundle and handle all the dependencies.
+	4. LoadDependencies()
+		Load all the dependent AssetBundles for a given AssetBundle.
+	5. BaseDownloadingURL
+		Set the base downloading url which is used for dependencies automatic downloading.
+	6. SimulateAssetBundleInEditor
+		Set if simulating AssetBundle in Editor play mode.
+	7. Variants
+		Set the active variant.
+	8. RemapVariantName()
+		Resolve the correct AssetBundle according to the active variant.
+	
+5. The scripts under Assets\ScriptsForAssetBundleSystem folder could be useful for your project. Please feel free to copy/integrate into your own projects.
+	

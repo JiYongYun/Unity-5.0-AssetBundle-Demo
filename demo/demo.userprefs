@@ -1,0 +1,18 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\ScriptsForAssetBundleSystem\Editor\BuildScript.cs">
+    <Files>
+      <File FileName="Assets\ScriptsForAssetBundleSystem\AssetBundleManager.cs" Line="85" Column="33" />
+      <File FileName="Assets\ScriptsForAssetBundleSystem\AssetBundleLoadOperation.cs" Line="1" Column="1" />
+      <File FileName="Assets\ScriptsForAssetBundleSystem\BaseLoader.cs" Line="1" Column="1" />
+      <File FileName="Assets\ScriptsForDemo\LoadAssets.cs" Line="1" Column="1" />
+      <File FileName="Assets\ScriptsForDemo\LoadScenes.cs" Line="1" Column="1" />
+      <File FileName="Assets\ScriptsForDemo\LoadVariants.cs" Line="1" Column="1" />
+      <File FileName="Assets\ScriptsForAssetBundleSystem\Editor\BuildScript.cs" Line="27" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
